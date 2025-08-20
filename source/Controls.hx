@@ -7,35 +7,65 @@ import flixel.input.keyboard.FlxKey;
 
 enum Action
 {
-	@:inputs([FlxKey.UP, FlxKey.W, DPAD_UP, LEFT_STICK_DIGITAL_UP, FlxVirtualPadInputID.UP])
-	UP;
+	/**
+	 * Move Up for menu
+	 */
+	@:inputs([FlxKey.UP, FlxKey.W])
+	UP_UI;
 
-	@:inputs([
-		FlxKey.DOWN,
-		FlxKey.S,
-		DPAD_DOWN,
-		LEFT_STICK_DIGITAL_DOWN,
-		FlxVirtualPadInputID.DOWN
-	])
-	DOWN;
+	/**
+	 * Move Up for game
+	 */
+	@:inputs([FlxKey.UP, FlxKey.W])
+	UP_GAME;
 
-	@:inputs([
-		FlxKey.LEFT,
-		FlxKey.A,
-		DPAD_LEFT,
-		LEFT_STICK_DIGITAL_LEFT,
-		FlxVirtualPadInputID.LEFT
-	])
-	LEFT;
+	/**
+	 * Move Down for menu
+	 */
+	@:inputs([FlxKey.DOWN, FlxKey.S])
+	DOWN_UI;
 
-	@:inputs([
-		FlxKey.RIGHT,
-		FlxKey.D,
-		DPAD_RIGHT,
-		LEFT_STICK_DIGITAL_RIGHT,
-		FlxVirtualPadInputID.RIGHT
-	])
-	RIGHT;
+	/**
+	 * Move Down for game
+	 */
+	@:inputs([FlxKey.DOWN, FlxKey.S])
+	DOWN_GAME;
+
+	/**
+	 * Move Left for menu
+	 */
+	@:inputs([FlxKey.LEFT, FlxKey.A])
+	LEFT_UI;
+
+	/**
+	 * Move Left for game
+	 */
+	@:inputs([FlxKey.LEFT, FlxKey.A])
+	LEFT_GAME;
+
+	/**
+	 * Move Right for menu
+	 */
+	@:inputs([FlxKey.RIGHT, FlxKey.D])
+	RIGHT_UI;
+
+	/**
+	 * Move Right for game
+	 */
+	@:inputs([FlxKey.RIGHT, FlxKey.D])
+	RIGHT_GAME;
+
+	/**
+	 * Confirm for both menu and game
+	 */
+	@:inputs([FlxKey.ENTER])
+	ACCEPT;
+
+	/**
+	 * Cancel for both menu and game
+	 */
+	@:inputs([FlxKey.ESCAPE])
+	BACK;
 }
 
 class Controls extends FlxControls<Action> {}

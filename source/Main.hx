@@ -16,6 +16,8 @@ class Main extends Sprite
 		game._customSoundTray = SoundTray;
 		addChild(game);
 
+		SaveData.initData();
+
 		var fpsCounter:FPS = new FPS(3, 3, FlxColor.WHITE);
 		addChild(fpsCounter);
 	}

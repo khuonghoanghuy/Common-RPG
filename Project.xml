@@ -20,6 +20,8 @@
 	<!-- Libraries -->
 	<haxelib name="flixel" />
 	<haxelib name="flixel-controls" />
+	<haxelib name="flixel-addons" />
+	<haxelib name="flixel-ui" />
 
 	<!-- Core Settings -->
 	<haxedef name="FLX_NO_HEALTH" />
