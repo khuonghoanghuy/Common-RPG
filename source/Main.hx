@@ -11,7 +11,7 @@ class Main extends Sprite
 	{
 		super();
 
-		var game:FlxGame = new FlxGame(0, 0, PlayState);
+		var game:FlxGame = new FlxGame(0, 0, MenuState);
 		@:privateAccess
 		game._customSoundTray = SoundTray;
 		addChild(game);

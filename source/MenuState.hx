@@ -2,6 +2,7 @@ package;
 
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
+import flixel.util.FlxColor;
 
 class MenuState extends BaseState
 {
@@ -15,7 +16,7 @@ class MenuState extends BaseState
         menuGroup = new FlxTypedGroup<FlxText>();
         for (i in 0...menuItems.length) {
             var menuItem:FlxText = new FlxText(100, 50 + i * 30, 200, menuItems[i]);
-            menuItem.setFormat(null, 16, null, CENTER);
+			menuItem.setFormat(null, 16, FlxColor.WHITE, CENTER);
             menuGroup.add(menuItem);
         }
         add(menuGroup);
@@ -34,7 +35,7 @@ class MenuState extends BaseState
         for (i in 0...menuGroup.length) {
             var menuItem:FlxText = menuGroup.members[i];
             if (i == selectedItem) {
-                menuItem.setFormat(null, 16, 0xFFFF00, CENTER);
+				menuItem.setFormat(null, 16, 0xC2C216, CENTER);
             } else {
                 menuItem.setFormat(null, 16, 0xFFFFFF, CENTER);
             }
