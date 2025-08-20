@@ -1,10 +1,9 @@
 package;
 
-import flixel.FlxState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
 
-class MenuState extends FlxState
+class MenuState extends BaseState
 {
     var menuItems:Array<String> = ["Start Game", "Options", "Exit"];
     var selectedItem:Int = 0;
@@ -24,6 +23,10 @@ class MenuState extends FlxState
 
     override function update(elapsed:Float) {
         super.update(elapsed);
+		if (controls.justPressed.UP || controls.justPressed.DOWN)
+		{
+			changeSelection(controls.justPressed.UP ? -1 : 1);
+		}
     }
 
     function changeSelection(change:Int = 0) {
