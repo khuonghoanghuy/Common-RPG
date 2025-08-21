@@ -5,7 +5,7 @@ import flixel.FlxState;
 
 class BaseState extends FlxState
 {
-    var controls:Controls;    
+	var controls:Controls;
 
     public function new() {
         super();

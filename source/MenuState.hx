@@ -35,6 +35,8 @@ class MenuState extends BaseState
 		{
 			switch (menuItems[selectedItem])
 			{
+				case "Start Game":
+					FlxG.switchState(() -> new PlayState());
 				case "Options":
 					FlxG.switchState(() -> new OptionsState());
 				case "Exit":

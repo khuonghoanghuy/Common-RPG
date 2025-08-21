@@ -1,0 +1,16 @@
+{
+    "nameLevel": "Fight Slime",
+    "moneyDrop": 5,
+    "expDrop": 10,
+    "enemies": [
+        {
+            "type": "Slime"
+        },
+        {
+            "type": "Slime"
+        },
+        {
+            "type": "Slime"
+        }
+    ]
+}
